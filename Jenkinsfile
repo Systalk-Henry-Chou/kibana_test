@@ -16,7 +16,7 @@ pipeline {
             }
         }
         stage('Remove Image'){
-            steps {y
+            steps {
                 sh 'docker-compose rm -y'
                 sh 'docker rmi flask/test:1 -y'
             }
