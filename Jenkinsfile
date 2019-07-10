@@ -4,7 +4,7 @@ pipeline {
     stages{
         stage ('Build'){
             steps {
-                sh 'docker build -f Dockerfile -t flask/test:1-devel .'
+                sh 'docker build -f Dockerfile . -t flask/test:1'
             }
     
         }
