@@ -30,7 +30,7 @@
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
           <stringProp name="HTTPSampler.domain">${__P(Host,127.0.0.1)}</stringProp>
-          <stringProp name="HTTPSampler.port">9090</stringProp>
+          <stringProp name="HTTPSampler.port">5000</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">/</stringProp>
@@ -91,7 +91,7 @@ if (thisRequest &gt; 1000){
                 <connectTime>true</connectTime>
               </value>
             </objProp>
-            <stringProp name="filename">${filepath}\result.jtl</stringProp>
+            <stringProp name="filename">${__P(filepath,)}/result.jtl</stringProp>
           </ResultCollector>
           <hashTree/>
           <kg.apc.jmeter.perfmon.PerfMonCollector guiclass="kg.apc.jmeter.vizualizers.PerfMonGui" testclass="kg.apc.jmeter.perfmon.PerfMonCollector" testname="jp@gc - PerfMon Metrics Collector" enabled="true">
@@ -128,7 +128,7 @@ if (thisRequest &gt; 1000){
                 <connectTime>true</connectTime>
               </value>
             </objProp>
-            <stringProp name="filename">${filepath}\resource.jtl</stringProp>
+            <stringProp name="filename">${__P(filepath,)}/resource.jtl</stringProp>
             <longProp name="interval_grouping">1000</longProp>
             <boolProp name="graph_aggregated">false</boolProp>
             <stringProp name="include_sample_labels"></stringProp>
