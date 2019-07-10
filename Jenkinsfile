@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Test'){
             steps {
-                sh '.run.sh'
+                sh './run.sh'
                 sh 'docker-compose stop'
             }
         }
